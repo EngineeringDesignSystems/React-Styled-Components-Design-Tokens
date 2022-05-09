@@ -21,6 +21,7 @@ This Project features:
 |---|---|
 | <img width="1512" alt="lightTheme" src="https://user-images.githubusercontent.com/5474124/167498565-100f61c4-ca4a-4208-aa66-dc5a2882461c.png">  |    <img width="1512" alt="darkTheme" src="https://user-images.githubusercontent.com/5474124/167498576-367ac915-fb00-4d00-8630-7b97f80cd025.png"> |
 
+> Note: the [Design Tokens](https://www.figma.com/community/plugin/888356646278934516/Design-Tokens) Figma plugin exports camelCase tokens as all lowercase, so that is why the color tokens are all lowercase. You may want to make your tokens as camelCase instead.
   
 2. A general Button component that consumes theme context and has an API that matches the Button component in Figma. The Properties + Variants in Figma directly correspond to the component's API structure and interraction styles.
 
