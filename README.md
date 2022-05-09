@@ -1,5 +1,11 @@
 # Actionable Design Systems: React + styled-components
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3c7cc006-2bf6-4bf0-90c4-1664d60efb3b/deploy-status)](https://app.netlify.com/sites/actionable-design-systems-react-styled-components/deploys)
+
+- [Live Site](https://actionable-design-systems-react-styled-components.netlify.app/)
+- [Figma Mockup](https://www.figma.com/file/zwUGIhow83YT0bCceds8Ow/Design-System-Starter?node-id=0%3A1)
+
+
 ## Overview
 
 There are many ways to set up a design system that serves design and engineering equally. In this project we implement a general design system starter project with color tokens, typography tokens, and general spacing content to show an example of how to do this process across design ([See Figma Mockup](https://www.figma.com/file/zwUGIhow83YT0bCceds8Ow/Design-System-Starter?node-id=0%3A1)) and engineering (this project's code).
