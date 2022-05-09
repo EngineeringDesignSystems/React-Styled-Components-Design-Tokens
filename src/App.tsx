@@ -20,7 +20,10 @@ import {
 } from "./theme/theme";
 
 function App() {
+  // STATE
   const [theme, setTheme] = useState(darkTheme);
+
+  // UI PRINTOUTS
   const typographyPrintout = themeTypographyKeys.map((key: string) => {
     return (
       <Text key={`${key}-listItem`} styleVariant={key as TThemeTypographyKey}>
@@ -28,7 +31,6 @@ function App() {
       </Text>
     );
   });
-
   const primitiveColorsPrintout = Object.keys(primitiveColors).map(
     (colorKey) => (
       <PreviewColorToken
@@ -37,7 +39,6 @@ function App() {
       />
     )
   );
-
   const themeColorsPrintout = themeSpecificColorsKeys.map((colorKey) => {
     return (
       <PreviewColorToken
@@ -57,11 +58,11 @@ function App() {
           </Text>
           <Button
             label="Toggle Theme"
-            styleVariant="secondary"
-            sizeVariant="small"
             onClick={() => {
               setTheme(theme === darkTheme ? lightTheme : darkTheme);
             }}
+            sizeVariant="small"
+            styleVariant="secondary"
           />
         </Header>
         <Divider />

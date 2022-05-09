@@ -27,7 +27,7 @@ export const PreviewColorToken: React.FC<TPreviewColorTokenProps> = ({
   return (
     <OuterWrapper>
       <Text styleVariant="heading5">{colorVariant}</Text>
-      <Text tagElement="p" styleVariant="paragraph">
+      <Text styleVariant="paragraph" tagElement="p">
         {/* Core theme colors dispaly primitive key, primitives display hex value */}
         {isCoreColor ? primitiveColorName : themeContext.colors[colorVariant]}
       </Text>

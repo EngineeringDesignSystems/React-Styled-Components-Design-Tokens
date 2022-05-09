@@ -13,13 +13,13 @@ type TButtonProps = {
    */
   buttonState: keyof TButtonStates;
   /**
-   * Button size variant
-   */
-  sizeVariant: keyof TButtonSizeVariants;
-  /**
    * Button style variant
    */
   styleVariant: keyof TButtonStyleVariants;
+  /**
+   * Button size variant
+   */
+  sizeVariant: keyof TButtonSizeVariants;
 };
 
 export const ButtonStyled = styled.button<TButtonProps>`

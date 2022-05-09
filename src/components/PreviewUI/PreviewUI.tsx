@@ -13,11 +13,11 @@ export const PreviewUI: React.FC<TPreviewUIProps> = () => {
         onbackground text
       </Text>
       <Surface>
-        <Text tagElement="p" styleVariant="paragraph">
+        <Text styleVariant="paragraph" tagElement="p">
           onsurface text
         </Text>
-        <Button styleVariant="primary" label="Primary Button" />
-        <Button styleVariant="secondary" label="Secondary Button" />
+        <Button label="Primary Button" styleVariant="primary" />
+        <Button label="Secondary Button" styleVariant="secondary" />
       </Surface>
     </>
   );

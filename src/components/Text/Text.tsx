@@ -3,21 +3,21 @@ import { TThemeColorKey, TThemeTypographyKey } from "../../theme/theme";
 
 type TTextProps = {
   /**
-   * tag to render as
+   * Theme Color token to display
    */
-  tagElement?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "label" | "p";
+  colorVariant?: TThemeColorKey;
   /**
-   * theme Typography variant
+   * Theme Typography variant
    */
   styleVariant: TThemeTypographyKey;
   /**
-   * theme Color to display
+   * Tag to render as
    */
-  colorVariant?: TThemeColorKey;
+  tagElement?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "label" | "p";
 };
 
 export const Text = styled("p").attrs<TTextProps>(
-  ({ tagElement, styleVariant }) => {
+  ({ styleVariant, tagElement }) => {
     const tagsLibrary = {
       heading1: "h1",
       heading2: "h2",

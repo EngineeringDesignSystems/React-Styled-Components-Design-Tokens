@@ -3,12 +3,12 @@ import { TTheme } from "./theme";
 
 // STYLED-COMPONENTS THEME INJECTION
 export const {
-  css,
   createGlobalStyle,
-  keyframes,
+  css,
   default: styled,
+  keyframes,
   ServerStyleSheet,
-  ThemeProvider,
   ThemeContext,
+  ThemeProvider,
   useTheme,
 } = baseStyled as unknown as baseStyled.ThemedStyledComponentsModule<TTheme>;

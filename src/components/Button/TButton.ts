@@ -11,22 +11,22 @@ import { TThemeTypographyKey } from "../../theme/theme";
 //  interractions:  active hover none  active hover none   active hover none  active hover none
 
 type TButtonInterractionStyles = {
-  // none
-  noneBackgroundColor: string;
-  noneFontColor: string;
+  // active
+  activeBackgroundColor: string;
+  activeFontColor: string;
 
   // hover
   hoverBackgroundColor: string;
   hoverFontColor: string;
 
-  // active
-  activeBackgroundColor: string;
-  activeFontColor: string;
+  // none
+  noneBackgroundColor: string;
+  noneFontColor: string;
 };
 
 export type TButtonStates = {
-  enabled: TButtonInterractionStyles;
   disabled: TButtonInterractionStyles;
+  enabled: TButtonInterractionStyles;
 };
 
 export type TButtonStyleVariants = {
