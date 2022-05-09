@@ -5,29 +5,58 @@ type TTextProps = {
   /**
    * tag to render as
    */
-  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "label" | "p";
+  tagElement?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "label" | "p";
   /**
    * theme Typography variant
    */
-  variant: TThemeTypographyKey;
+  styleVariant: TThemeTypographyKey;
   /**
    * theme Color to display
    */
   colorVariant?: TThemeColorKey;
 };
 
-export const Text = styled("p").attrs<TTextProps>(({ as }) => {
-  return {
-    as: as,
-  };
-})<TTextProps>`
-  ${({ color, theme, variant }) => {
-    const { fontFamily, fontWeight, letterSpacing } = theme.typography[variant];
+export const Text = styled("p").attrs<TTextProps>(
+  ({ tagElement, styleVariant }) => {
+    const tagsLibrary = {
+      heading1: "h1",
+      heading2: "h2",
+      heading3: "h3",
+      heading4: "h4",
+      heading5: "h5",
+      heading6: "h6",
+      label: "label",
+      paragraph: "p",
+    };
+
+    const as = tagElement ? tagElement : tagsLibrary[styleVariant];
+
+    return {
+      as: as,
+    };
+  }
+)<TTextProps>`
+  ${({ colorVariant, styleVariant, theme }) => {
+    const {
+      fontFamily,
+      fontSize,
+      fontStretch,
+      fontWeight,
+      letterSpacing,
+      lineHeight,
+      textCase,
+    } = theme.typography[styleVariant];
     return css`
-      color ${color ? color : theme.colors.onbackground};
+      color ${
+        colorVariant ? theme.colors[colorVariant] : theme.colors.onbackground
+      };
       font-family: ${fontFamily};
+      font-size: ${fontSize}px;
+      font-stretch: ${fontStretch};
       font-weight: ${fontWeight};
-      letter-spacing: ${letterSpacing};
+      letter-spacing: ${letterSpacing}px;
+      line-height: ${lineHeight}px;
+      text-transform: ${textCase};
     `;
   }}
 `;

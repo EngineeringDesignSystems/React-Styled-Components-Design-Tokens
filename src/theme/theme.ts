@@ -89,6 +89,7 @@ const sharedThemeValues = {
       textCase: "none",
     },
   },
+  spacing: [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64],
 };
 const themeShape = {
   colors: {
@@ -161,10 +162,20 @@ export const themeSpecificColorsKeys = [
   "primarydisabled",
   "surfacedisabled",
 ];
+export const themeTypographyKeys = [
+  "heading1",
+  "heading2",
+  "heading3",
+  "heading4",
+  "heading5",
+  "paragraph",
+];
 
 // TYPES
 export type TThemeColorKey = keyof typeof themeShape.colors;
 export type TThemeTypographyKey = keyof typeof themeShape.typography;
+export type TThemeTypographyVariant = typeof themeShape.typography.heading1;
+
 export type TTheme = typeof themeShape;
 
 // THEMES

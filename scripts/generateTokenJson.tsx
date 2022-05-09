@@ -63,9 +63,9 @@ steps -->
 */
 
 // THEME BOILERPLATE VALUES
-const sharedThemeValues = { typography: ${JSON.stringify(
-    parsedThemeValues.typography
-  )} };
+const sharedThemeValues = { 
+  typography: ${JSON.stringify(parsedThemeValues.typography)},
+  spacing: [0,4,8,12,16,20,24,28,32,36,40,44,48,52,56,60,64] };
 const themeShape = { colors:  ${JSON.stringify({
     ...parsedThemeValues.lightTheme,
     ...parsedThemeValues.primitives,
@@ -74,10 +74,15 @@ export const primitiveColors = ${JSON.stringify(parsedThemeValues.primitives)};
 export const themeSpecificColorsKeys = ${JSON.stringify(
     Object.keys(parsedThemeValues.lightTheme)
   )};
+export const themeTypographyKeys = ${JSON.stringify(
+    Object.keys(parsedThemeValues.typography)
+  )};
 
 // TYPES
 export type TThemeColorKey = keyof typeof themeShape.colors;
 export type TThemeTypographyKey = keyof typeof themeShape.typography;
+export type TThemeTypographyVariant = typeof themeShape.typography.heading1;
+
 export type TTheme = typeof themeShape;
 
 // THEMES

@@ -16,14 +16,12 @@ export const ColorBar = styled.div<TColorBarProps>`
 `;
 
 export const OuterWrapper = styled.div`
-  ${() => {
+  ${({ theme }) => {
     return css`
+      align-items: center;
       display: grid;
+      gap: ${theme.spacing[4]}px;
       grid-template-columns: 2fr 2fr 8fr;
-      gap: 16px;
-      > p {
-        min-width: 100px;
-      }
     `;
   }}
 `;

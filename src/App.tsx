@@ -1,47 +1,78 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { AppStyled } from "./AppStyles";
-import { ColorTokenPreview } from "./components/ColorTokenPreview/ColorTokenPreview";
-import { Text } from "./components/Text/Text";
+import {
+  Button,
+  Divider,
+  PreviewColorToken,
+  PreviewUI,
+  Text,
+} from "./components";
 import { ThemeProvider } from "./theme/styled-components";
 import {
+  darkTheme,
   lightTheme,
   primitiveColors,
   themeSpecificColorsKeys,
+  themeTypographyKeys,
   TThemeColorKey,
+  TThemeTypographyKey,
 } from "./theme/theme";
 
 function App() {
-  const primitiveColorsPrintout = Object.keys(primitiveColors).map(
-    (colorKey) => (
-      <>
-        <ColorTokenPreview colorVariant={colorKey as TThemeColorKey} />
-      </>
-    )
-  );
-  const themeColorsPrintout = themeSpecificColorsKeys.map((colorKey) => {
+  const [theme, setTheme] = useState(darkTheme);
+  const typographyPrintout = themeTypographyKeys.map((key: string) => {
     return (
-      <>
-        <ColorTokenPreview colorVariant={colorKey as TThemeColorKey} />
-      </>
+      <Text key={`${key}-listItem`} styleVariant={key as TThemeTypographyKey}>
+        {key}
+      </Text>
     );
   });
+
+  const primitiveColorsPrintout = Object.keys(primitiveColors).map(
+    (colorKey) => (
+      <PreviewColorToken
+        key={`${colorKey}-listItem`}
+        colorVariant={colorKey as TThemeColorKey}
+      />
+    )
+  );
+
+  const themeColorsPrintout = themeSpecificColorsKeys.map((colorKey) => {
+    return (
+      <PreviewColorToken
+        key={`${colorKey}-listItem`}
+        isCoreColor={true}
+        colorVariant={colorKey as TThemeColorKey}
+      />
+    );
+  });
+
   return (
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={theme}>
       <AppStyled>
         <header className="App-header">
-          Design System Starter: React + styled-components
+          <Text styleVariant="heading1">
+            Design System Starter: React + styled-components
+          </Text>
+          <Button
+            label="Toggle Theme"
+            styleVariant="secondary"
+            sizeVariant="small"
+            onClick={() => {
+              setTheme(theme === darkTheme ? lightTheme : darkTheme);
+            }}
+          />
         </header>
-        <Text as="h1" variant="heading1">
-          Colors
-        </Text>
-        <Text as="h2" variant="heading2">
-          Core Colors
-        </Text>
+        <Text styleVariant="heading2">Typography</Text>
+        <Divider />
+        {typographyPrintout}
+        <Text styleVariant="heading2">Colors</Text>
+        <Divider />
+        <PreviewUI />
+        <Text styleVariant="heading3">Core Colors</Text>
         {themeColorsPrintout}
-        <Text as="h2" variant="heading2">
-          Primitives Colors
-        </Text>
+        <Text styleVariant="heading3">Primitives Colors</Text>
         {primitiveColorsPrintout}
       </AppStyled>
     </ThemeProvider>
