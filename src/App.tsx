@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import { AppStyled } from "./AppStyles";
+import { AppStyled, Header, TypographyWrapper } from "./AppStyles";
 import {
   Button,
   Divider,
@@ -51,7 +51,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <AppStyled>
-        <header className="App-header">
+        <Header className="App-header">
           <Text styleVariant="heading1">
             Design System Starter: React + styled-components
           </Text>
@@ -63,10 +63,14 @@ function App() {
               setTheme(theme === darkTheme ? lightTheme : darkTheme);
             }}
           />
-        </header>
-        <Text styleVariant="heading2">Typography</Text>
+        </Header>
         <Divider />
-        {typographyPrintout}
+        <TypographyWrapper>
+          <Text styleVariant="heading2">Typography</Text>
+          <Divider />
+          {typographyPrintout}
+        </TypographyWrapper>
+        <Divider />
         <Text styleVariant="heading2">Colors</Text>
         <Divider />
         <PreviewUI />

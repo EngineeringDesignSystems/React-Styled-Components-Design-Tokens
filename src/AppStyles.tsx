@@ -8,3 +8,19 @@ export const AppStyled = styled.div`
     `;
   }}
 `;
+
+export const Header = styled.header`
+  ${({ theme }) => {
+    return css`
+      padding-bottom: ${theme.spacing[11]}px;
+    `;
+  }}
+`;
+
+export const TypographyWrapper = styled.div`
+  ${({ theme }) => {
+    return css`
+      padding-bottom: ${theme.spacing[11]}px;
+    `;
+  }}
+`;
