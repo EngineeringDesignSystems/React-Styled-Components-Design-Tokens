@@ -13,7 +13,7 @@ export const PreviewUI: React.FC<TPreviewUIProps> = () => {
         onbackground text
       </Text>
       <Surface>
-        <Text styleVariant="paragraph" tagElement="p">
+        <Text colorVariant="onsurface" styleVariant="paragraph" tagElement="p">
           onsurface text
         </Text>
         <Button label="Primary Button" styleVariant="primary" />
