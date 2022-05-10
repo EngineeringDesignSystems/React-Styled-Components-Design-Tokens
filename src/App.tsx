@@ -54,7 +54,8 @@ function App() {
       <AppStyled>
         <Header className="App-header">
           <Text styleVariant="heading1">
-            Design System Starter: React + styled-components
+            Design System Starter: React + styled-components + Design Tokens
+            Figma Plugin
           </Text>
           <Button
             label="Toggle Theme"
