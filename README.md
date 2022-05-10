@@ -1,4 +1,4 @@
-# Actionable Design Systems: React + styled-components
+# Actionable Design Systems: React + styled-components + Design Tokens Figma Plugin
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3c7cc006-2bf6-4bf0-90c4-1664d60efb3b/deploy-status)](https://app.netlify.com/sites/actionable-design-systems-react-styled-components/deploys)
 
