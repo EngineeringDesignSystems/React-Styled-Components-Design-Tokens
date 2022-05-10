@@ -62,7 +62,7 @@ function App() {
               setTheme(theme === darkTheme ? lightTheme : darkTheme);
             }}
             sizeVariant="small"
-            styleVariant="secondary"
+            styleVariant="primary"
           />
         </Header>
         <Divider />
