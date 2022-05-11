@@ -27,11 +27,7 @@ This Project features:
 
 4. A button that toggles the theme in the header of the page.
   
-
-  
-| Figma Properties  | Figma Diagram  |
-|---|---|
-| <img width="693" alt="Screen Shot 2022-05-09 at 1 42 13 PM" src="https://user-images.githubusercontent.com/5474124/167494370-54368ff7-a1fa-4568-bdb9-ec5d18af428a.png">  |  <img width="1313" alt="Button Diagram" src="https://user-images.githubusercontent.com/5474124/167493988-0a75b866-903c-489d-a62d-81687d3476c6.png">  |
+<img width="693" alt="Screen Shot 2022-05-09 at 1 42 13 PM" src="https://user-images.githubusercontent.com/5474124/167494370-54368ff7-a1fa-4568-bdb9-ec5d18af428a.png">
 
 **Button JSON Structure**:
 <img width="2782" alt="json" src="https://user-images.githubusercontent.com/5474124/167494527-39bdac91-23bd-47dc-a750-cb11d9996df9.png">
