@@ -41,6 +41,26 @@ This project:
 2. Use [styled-components](https://styled-components.com/) for style utilities.
 3. Exported Design tokens from Figma via the [Design Tokens](https://www.figma.com/community/plugin/888356646278934516/Design-Tokens) Figma Plugin (see design-tokens.tokens.json output).
 
+### Note:
+In order to have the theme inside styled-components have the shape of our theme, we inject our theme's type (TTheme) in styled-components.ts and use this file's output instead of importing directly from "styled-components" -->
+
+```
+import * as baseStyled from "styled-components";
+import { TTheme } from "./theme";
+
+// STYLED-COMPONENTS THEME INJECTION
+export const {
+  createGlobalStyle,
+  css,
+  default: styled,
+  keyframes,
+  ServerStyleSheet,
+  ThemeContext,
+  ThemeProvider,
+  useTheme,
+} = baseStyled as unknown as baseStyled.ThemedStyledComponentsModule<TTheme>;
+```
+
 ## Quick start
 
 In order to run this on your local:
