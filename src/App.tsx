@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import { AppStyled, Header, TypographyWrapper } from "./AppStyles";
 import {
@@ -76,9 +76,9 @@ function App() {
         <Text styleVariant="heading2">Colors</Text>
         <Divider />
         <PreviewUI />
-        <Text styleVariant="heading3">Core Colors</Text>
+        <Text styleVariant="heading3">Variable Semantic Colors</Text>
         {themeColorsPrintout}
-        <Text styleVariant="heading3">Primitives Colors</Text>
+        <Text styleVariant="heading3">Static Primitives Colors</Text>
         {primitiveColorsPrintout}
       </AppStyled>
     </ThemeProvider>
