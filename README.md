@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3c7cc006-2bf6-4bf0-90c4-1664d60efb3b/deploy-status)](https://app.netlify.com/sites/actionable-design-systems-react-styled-components/deploys)
 
-- [Live Site](https://actionable-design-systems-react-styled-components-design-tokens.netlify.app)
+- [Live Site](https://eds-react-styled-components-dt.netlify.app/)
 - [Figma Mockup](https://www.figma.com/file/zwUGIhow83YT0bCceds8Ow/Design-System-Starter?node-id=0%3A1)
 
 ## Overview
